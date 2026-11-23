@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#101827" />
+  <title>INDO AI — Your AI companion</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="brand"><div class="brand-mark">I</div><div><b>INDO AI</b><small>Your AI companion</small></div></div>
+      <button class="new-chat" id="newChat">＋ <span>New chat</span></button>
+      <div class="side-label">TOOLS</div>
+      <button class="tool-link active" data-mode="chat">✦ <span>AI Chat</span></button>
+      <button class="tool-link" data-mode="image">▧ <span>Image Generator</span></button>
+      <button class="tool-link" data-prompt="Tell me a genuinely funny joke in Hindi.">☻ <span>Tell me a joke</span></button>
+      <button class="tool-link" data-prompt="Help me solve this question step by step: ">∑ <span>Study & solve</span></button>
+      <button class="tool-link" data-prompt="Help me write and explain code for: ">⌘ <span>Coding helper</span></button>
+      <div class="sidebar-bottom"><span class="status-dot"></span> AI service <span id="serviceStatus">checking…</span></div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="top-title">INDO AI <span class="model-pill">AI ASSISTANT</span></div>
+        <button class="clear-btn" id="clearChat">Clear chat</button>
+      </header>
+
+      <section class="welcome" id="welcome">
+        <div class="hero-orb">✦</div>
+        <p class="eyebrow">YOUR IDEAS. ONE AI.</p>
+        <h1>What can I help<br/><span>you with today?</span></h1>
+        <p class="subhead">Ask anything, learn something new, solve a problem or create an image.</p>
+        <div class="suggestions">
+          <button class="suggestion" data-prompt="Explain black holes in simple Hindi."><b>◉ Learn something</b><small>Explain a complex topic simply</small></button>
+          <button class="suggestion" data-prompt="Tell me 3 funny jokes in Hinglish."><b>☻ Make me laugh</b><small>Get a fresh joke</small></button>
+          <button class="suggestion" data-prompt="Solve 25% of 840 and explain step by step."><b>∑ Solve a question</b><small>Maths, science and more</small></button>
+          <button class="suggestion" data-prompt="Give me 5 creative ideas for a short viral video."><b>✧ Get creative</b><small>Ideas, stories and scripts</small></button>
+        </div>
+      </section>
+
+      <section class="chat-area" id="chatArea" aria-live="polite"></section>
+      <section class="image-area hidden" id="imageArea">
+        <div class="image-heading"><div class="hero-orb small">▧</div><h2>Create an image</h2><p>Describe the image you want INDO AI to make.</p></div>
+        <div id="generatedImage"></div>
+      </section>
+
+      <div class="composer-wrap">
+        <div class="attachment-preview hidden" id="attachmentPreview"></div>
+        <form class="composer" id="chatForm">
+          <input type="file" id="imageUpload" accept="image/*" hidden />
+          <button type="button" class="icon-btn" id="attachBtn" title="Upload image">＋</button>
+          <textarea id="messageInput" rows="1" placeholder="Message INDO AI…" autocomplete="off"></textarea>
+          <button type="button" class="icon-btn voice-btn" id="voiceBtn" title="Voice input">🎙</button>
+          <button type="submit" class="send-btn" id="sendBtn" aria-label="Send">↑</button>
+        </form>
+        <p class="disclaimer">INDO AI can make mistakes. Verify important information.</p>
+      </div>
+    </main>
+  </div>
+  <script src="/app.js"></script>
+</body>
+</html>
